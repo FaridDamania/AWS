@@ -1,0 +1,1000 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>VICC Question Bank</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: white;
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7d7f36ad-e95f-4b55-9d74-b596d97cca10" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/webb1.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📍</span></div><h1 class="page-title">VICC Question Bank</h1><p class="page-description"></p></header><div class="page-body"><h3 id="84e66e4f-e1dd-4f21-93b4-14b7dfd16cee" class="">Date: <time>@November 9, 2023</time> </h3><h3 id="23911368-2c3d-4c37-8f7e-48794482b071" class="">Question  10</h3><h3 id="30c07e46-764e-4ca1-aa25-4efa03c8b35e" class="">Steps</h3><ul id="832a8ff2-876b-44f8-bb52-b6969f01cde3" class="bulleted-list"><li style="list-style-type:disc">Budgets → Create budgets</li></ul><ul id="a6990a54-526c-4593-8f9f-5d76cbf97f4e" class="bulleted-list"><li style="list-style-type:disc">Customize</li></ul><ul id="3407f6f2-4ce5-4da1-82f0-14a1797fb157" class="bulleted-list"><li style="list-style-type:disc">Budget = 1000 for all AWS Services</li></ul><ul id="8cf500f5-0530-4057-bb41-9a188a934c7b" class="bulleted-list"><li style="list-style-type:disc">Baaki sab default</li></ul><ul id="b0b31588-531c-4e8f-9ce6-91da3087b016" class="bulleted-list"><li style="list-style-type:disc">Add Alert</li></ul><ul id="c558c8a8-16d6-4234-852c-0ae3353d0e1a" class="bulleted-list"><li style="list-style-type:disc"></li></ul><figure id="a9ca4563-a47e-4e79-b05a-2c4c4f5f37d8" class="image" style="text-align:left"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled.png"><img style="width:549px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled.png"/></a></figure><ul id="f3ed7b57-5607-4584-91a8-1a43d109e1b9" class="bulleted-list"><li style="list-style-type:disc">Next → Next → Create</li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="e5ea302c-dbab-4e3e-a6f4-7435e8259594"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="915de782-790b-4e7a-b8d8-1785e4b13965" class="">
+</p><hr id="31d25811-3576-4ed3-8168-11722c524b95"/><p id="6bb9334d-f37d-40ab-962c-2fe50325df5d" class="">
+</p><h3 id="05930571-b50d-4f50-808b-9012a46b63ed" class="">Date: <time>@November 9, 2023</time> </h3><h3 id="76c793d7-020b-4a5b-a882-8bff96dfdb7b" class="">Question 31</h3><h3 id="4749449f-983c-46d5-afa9-8f31af0c3c10" class="">Steps</h3><ul id="1ab0fb10-ee7a-4e52-8f37-9c75441840ee" class="bulleted-list"><li style="list-style-type:disc">S3 buckets → Create Buckets</li></ul><ul id="c5ce04f7-f08c-4643-8114-0a323af7c5e9" class="bulleted-list"><li style="list-style-type:disc">Block all public access ko disable.</li></ul><ul id="404b6a41-cc43-42f4-8d59-6750104edbad" class="bulleted-list"><li style="list-style-type:disc">Create </li></ul><ul id="cee7ea10-ac5a-4515-8c9a-05f193435167" class="bulleted-list"><li style="list-style-type:disc">After creation → Properties → Static Website Hosting → Enable</li></ul><ul id="b873c8af-f138-4444-ac06-9ae6d17966c6" class="bulleted-list"><li style="list-style-type:disc">Add index.html (target)</li></ul><ul id="05acf14c-0087-4dfb-8154-a8a690339897" class="bulleted-list"><li style="list-style-type:disc">Make Objects Public:<ul id="c38d99a1-6faf-4684-8525-471df5fce2ae" class="bulleted-list"><li style="list-style-type:circle">Object Ownership → Enable ACL</li></ul></li></ul><ul id="9b61becb-74bd-478f-a83c-8f3a6816a947" class="bulleted-list"><li style="list-style-type:disc">Select all objects → Actions → Make public Using ACL</li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="98d9658a-c67a-44b7-88c8-5f903c8c87d9"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="0dd85e11-8cb0-454f-88ba-be3e8140c149" class="">
+</p><hr id="9ef9f001-6912-4f68-acbd-ab11a0206a03"/><p id="2e9ce50c-d4ce-4811-a364-f21319999a3a" class="">
+</p><h3 id="1f00f382-6e3b-4e0f-9c40-e952c7a54935" class="">Date: <time>@November 9, 2023</time> </h3><h3 id="eeed5b61-a6a9-4f46-9f60-cc46f237edaf" class="">Question 5</h3><h3 id="63d04c09-aa06-4aa9-b9cb-bfede2990800" class="">Steps</h3><ul id="8ddabafd-c8d7-4521-bacd-5cb8bf6df1a3" class="bulleted-list"><li style="list-style-type:disc">32-16= 16 , 2^16-5 = 65536-5 = 65531</li></ul><p id="a79e928c-22ce-44fa-86c4-474b1a509d95" class="">
+</p><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="6e6506ac-e1d8-4fcf-8d8f-112277a4bd3b"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY: lo</strong></div></figure><p id="3fb97a3f-ef0c-4aad-a7d8-b19e0a0969f7" class="">
+</p><hr id="cffe0519-4c8c-403f-a1e7-22d58cc72a77"/><p id="d67fbdc4-6ec4-4f93-867a-dc726ab83d34" class="">
+</p><h3 id="23b61941-924e-47e0-bed7-755090fb7d3d" class="">Date: <time>@November 9, 2023</time> </h3><h3 id="5a863539-89ec-4088-8f25-43a05bac080d" class="">Question 6</h3><h3 id="c5749166-345b-470c-ad14-aaef9e158484" class="">Steps</h3><ul id="8392fa84-4717-42dc-a10f-ccc0dec30ecb" class="bulleted-list"><li style="list-style-type:disc">First divide the subnet into two equal parts. </li></ul><ul id="19699487-01dc-462e-b9d4-5c157494e03f" class="bulleted-list"><li style="list-style-type:disc">192.168.0.0/20 will be 192.168.0.0/21(public) and 192.168.8.0/21(private). ((2048/255 , isliye 8 liya)</li></ul><ul id="671c8926-6483-40f7-ad97-e3a345b8e57e" class="bulleted-list"><li style="list-style-type:disc">32-21 =11 , 2^11-5 = 2048-5 = 2043 (do this for each)</li></ul><ul id="2728f311-5148-4209-9416-899cbcfd0a97" class="bulleted-list"><li style="list-style-type:disc"></li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="d07de805-b71f-4365-b0af-819c00a1ada7"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="9f7f8c1f-a6ae-417b-bb61-47e9e006f108" class="">
+</p><p id="6cf5d9be-a393-44ec-a28f-e294526a5fbf" class="">
+</p><hr id="37358f9d-78ea-4797-a0c6-ac864b46d7c7"/><p id="1625040b-161b-4a8a-aa01-f8cc04869fcb" class="">
+</p><h3 id="701a7ac1-149f-4769-8984-cf86b09fa7da" class="">Date: <time>@November 9, 2023</time> </h3><h3 id="ec4f0cc2-059f-4a6f-8116-be729f093db0" class="">Question 26</h3><h3 id="17d47ecd-26d9-423a-b42b-0e37563b5835" class="">Steps</h3><ul id="84988d75-c53e-4860-8be0-5b7761973f4f" class="bulleted-list"><li style="list-style-type:disc">Create VPC → VPC only</li></ul><ul id="83203183-5fee-4bff-82b3-b757ea8db880" class="bulleted-list"><li style="list-style-type:disc">VPC CIDR Block: 10.0.0.0/16 → Create</li></ul><ul id="c48caebe-d11f-4477-b7e8-b58267178c6e" class="bulleted-list"><li style="list-style-type:disc">Subnet<ul id="3f3ee3ee-3aa1-42b8-9227-dcd7efdab023" class="bulleted-list"><li style="list-style-type:circle">Create</li></ul><ul id="095c11f4-41e8-42ff-a35e-be2854175787" class="bulleted-list"><li style="list-style-type:circle">name: Public-1a → 10.0.0.0/24 (us-east-1a)</li></ul><ul id="a96dc534-7502-4c6c-9877-4698680251ea" class="bulleted-list"><li style="list-style-type:circle">name: Private-1a → 10.0.1.0/24 (us-east-1b)</li></ul></li></ul><ul id="d5ed910f-3438-462d-86d7-6ae808ee3014" class="bulleted-list"><li style="list-style-type:disc">Internet Gateway<ul id="5229ef3f-ecdd-44cb-a692-735987b3ae00" class="bulleted-list"><li style="list-style-type:circle">Create → Attach to VPC</li></ul></li></ul><ul id="b636e90e-c143-4ecc-be91-76f40fd54656" class="bulleted-list"><li style="list-style-type:disc">Route Table<ul id="cfd28390-4468-41f7-9b3f-b8c6b49163e6" class="bulleted-list"><li style="list-style-type:circle">name : Public → create</li></ul><ul id="7e265a6b-fe0b-4368-b158-ce546b1e6517" class="bulleted-list"><li style="list-style-type:circle">Subnet Association → edit subnet association → add public subnet</li></ul><ul id="8813a984-5bf0-419c-ac7b-f4a1feb002c0" class="bulleted-list"><li style="list-style-type:circle">Routes → Add route </li></ul><ul id="92714312-9a49-4a0b-8e8d-e70c8b280174" class="bulleted-list"><li style="list-style-type:circle"></li></ul><figure id="9631d170-ae4d-424a-9596-d37fa3f40f69" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%201.png"><img style="width:1242px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%201.png"/></a></figure><ul id="e330f034-cb72-4833-827d-f7eb304a2961" class="bulleted-list"><li style="list-style-type:circle">Make similar for private (internet gateway mat daalna private mei)</li></ul></li></ul><ul id="447d9260-6161-4afd-ad13-1b683ba2e47b" class="bulleted-list"><li style="list-style-type:disc">Security Group<ul id="ae24ab34-891b-4421-9f7f-a0a1d89646db" class="bulleted-list"><li style="list-style-type:circle">Create → VPC daalo</li></ul><ul id="649c9e92-f816-4c8b-ae0d-76f0fdd61783" class="bulleted-list"><li style="list-style-type:circle">Inbound rules</li></ul><figure id="f151fa6e-e6c6-466f-9de9-a9303a56a97a" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%202.png"><img style="width:1191px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%202.png"/></a></figure></li></ul><ul id="82bfb7f7-6097-4c17-89f8-9d8afb937e59" class="bulleted-list"><li style="list-style-type:disc">Key Pair<ul id="0cf6d12c-3cb3-490a-b39a-9505a5991bdb" class="bulleted-list"><li style="list-style-type:circle">EC2 → Key Pairs → create</li></ul><ul id="be760926-a5ff-4552-84ca-e7e2ddb7efa5" class="bulleted-list"><li style="list-style-type:circle">name: whatevs → PSA → .pem file</li></ul></li></ul><ul id="08316cdf-c4fc-47fd-8b60-4834b117a589" class="bulleted-list"><li style="list-style-type:disc">Create EC2 instance<p id="f92e8c23-f8fe-4845-8710-a599a74d0fe0" class="">Amazon Machine Image (AMI): Amazon Linux 2
+Instance Type: t2.micro
+Security Group: Use the security group created in step 3.
+Key Pair: Use the key pair generated in step 4.
+IAM Role: Attach an IAM role that allows basic EC2 permissions</p></li></ul><ul id="6d88d935-d4ae-4a95-978d-7b157fe9bb1a" class="bulleted-list"><li style="list-style-type:disc">Public IP address:<ul id="c1ab81ca-8cb2-40e9-93b9-02dcd4b400f4" class="bulleted-list"><li style="list-style-type:circle">Public Subnet → Edit subnet setting and enable auto-assign</li></ul></li></ul><ul id="2e79eb80-e4c8-40b5-b571-f8f12a61d48c" class="bulleted-list"><li style="list-style-type:disc">Session Manager:<p id="84e41150-4b0d-4aaf-ba59-7e2ff90bbb3c" class="">sudo yum install -y httpd
+sudo yum install -y wget
+cd /var/www/html
+vi index.html &amp; write &quot;Hello World!&quot; &gt; index.html
+sudo service httpd start</p></li></ul><ul id="997e0b1e-e13a-44ca-916b-8872bb81726c" class="bulleted-list"><li style="list-style-type:disc">.</li></ul><ul id="013908dc-188d-43ac-9d37-0389c24d6751" class="bulleted-list"><li style="list-style-type:disc"></li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="1f788d2a-2d0f-48ae-b189-71d4ef7cae10"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="0fb7eda4-3b88-4f6c-9906-d6d371300a81" class="">
+</p><hr id="8dd6fdd9-1d64-4d6f-b382-5ca6d6e0debd"/><p id="3e02a827-09ac-49df-842b-807c8a15f15b" class="">
+</p><h3 id="578321b4-a4da-4aa1-9c21-ad6bbf487825" class="">Date: <time>@November 10, 2023</time> </h3><h3 id="476da765-301f-460b-942d-b633be9ff178" class="">Question 11</h3><h3 id="9b9eb742-dce5-4256-8cce-39c9b53c67fb" class="">Steps</h3><p id="0d28a7f4-598d-4bde-a6d0-2da9473f66a3" class="">Handling a sudden surge in orders in an e-commerce website requires a scalable and reliable architecture. AWS offers services like AWS Lambda, Amazon Simple Queue Service (SQS), and Amazon DynamoDB that can be configured to address increased workloads. Below are steps you can take to configure these components for scalability and reliability:</p><ol type="1" id="5fab4080-2d43-4089-ac71-7dab0c3234d5" class="numbered-list" start="1"><li><em>AWS Lambda:</em><ul id="e64040c2-bab4-460f-9d11-85cb326d549e" class="bulleted-list"><li style="list-style-type:disc"><em>Increase Concurrent Executions:</em> In the Lambda function configuration, adjust the &quot;Concurrency&quot; settings to allow more simultaneous executions. This enables Lambda to handle more requests concurrently.</li></ul><ul id="f805fb96-938e-4adc-817a-ec909e7dc733" class="bulleted-list"><li style="list-style-type:disc"><em>Optimize Function Code:</em> Optimize your Lambda function code for performance and efficiency. Ensure that the code is well-structured and makes use of best practices to minimize execution time.</li></ul></li></ol><ol type="1" id="0dfa47c0-bdd4-4c1a-92e6-ff28dce51fc1" class="numbered-list" start="2"><li><em>Amazon SQS:</em><ul id="853ff4ec-b76f-4fcc-a75c-4335d0c22473" class="bulleted-list"><li style="list-style-type:disc"><em>Queue Configuration:</em> Configure your SQS queues to handle increased message throughput. You can adjust the &quot;Message Retention Period&quot; and &quot;Maximum Message Size&quot; based on your specific requirements.</li></ul><ul id="60104e57-0e3e-4542-a3e4-21651df10230" class="bulleted-list"><li style="list-style-type:disc"><em>Scaling SQS:</em> SQS is designed to automatically scale with the load. Ensure that you are using the standard queue type, which can handle a virtually unlimited number of messages per second. You can also leverage the auto-scaling capabilities of SQS to dynamically adjust the number of concurrent messages based on the workload.</li></ul></li></ol><ol type="1" id="bb133ae5-cf94-442c-9e88-795f344bd2f5" class="numbered-list" start="3"><li><em>Amazon DynamoDB:</em><ul id="0edc90dc-0442-4eac-a149-94d5d1b08458" class="bulleted-list"><li style="list-style-type:disc"><em>Provisioned Throughput:</em> DynamoDB allows you to provision throughput capacity for your tables. Adjust the read and write capacity units based on the increased workload. DynamoDB also has on-demand capacity, which automatically scales based on the actual request volume.</li></ul><ul id="14a742cc-1382-497a-8616-7f672dda5d71" class="bulleted-list"><li style="list-style-type:disc"><em>DynamoDB Accelerator (DAX):</em> Consider using DynamoDB Accelerator (DAX) for caching frequently accessed data. This can reduce the load on DynamoDB and improve response times.</li></ul><ul id="b8f4180b-f4ab-495b-88cd-bca9a24bf619" class="bulleted-list"><li style="list-style-type:disc"><em>Partition Key Design:</em> Ensure your DynamoDB table has an effective partition key design to distribute the data evenly across partitions. This prevents hot partitions and ensures a more balanced workload.</li></ul></li></ol><ol type="1" id="c616e4f9-c82e-430f-bd51-e538a9eaea26" class="numbered-list" start="4"><li><em>Auto Scaling:</em><ul id="9d16fc3d-0c83-4096-ab21-b5b51d8d8064" class="bulleted-list"><li style="list-style-type:disc">Leverage AWS Auto Scaling to automatically adjust the number of resources (e.g., EC2 instances, Lambda functions) based on demand. This helps in scaling up during peaks and scaling down during periods of low demand.</li></ul></li></ol><ol type="1" id="58aaedb6-91aa-40b4-86c2-806636abe099" class="numbered-list" start="5"><li><em>Monitoring and Logging:</em><ul id="cd5e4ee9-da43-4480-9b9c-d66a95c92963" class="bulleted-list"><li style="list-style-type:disc">Implement robust monitoring using AWS CloudWatch to track the performance of Lambda functions, SQS queues, and DynamoDB tables. Set up alarms to be notified of any performance issues.</li></ul><ul id="064eb06b-1e98-4774-b4da-0f7079a61347" class="bulleted-list"><li style="list-style-type:disc">Use AWS X-Ray for tracing and debugging distributed applications. This can help identify bottlenecks and areas for optimization.</li></ul></li></ol><ol type="1" id="03be9a24-a3b0-4526-b8b1-d8823964ba12" class="numbered-list" start="6"><li><em>Backup and Recovery:</em><ul id="d0a43dc9-4d16-438f-a787-9d3029a21019" class="bulleted-list"><li style="list-style-type:disc">Implement backup and recovery mechanisms for critical data stored in DynamoDB. Ensure that you have a strategy for data durability and resilience against failures.</li></ul></li></ol><p id="d7a32b33-be53-4a0b-ae09-c7d3a2e8f5d2" class="">By configuring these components with scalability and reliability in mind, you can ensure that your order processing system remains responsive and can handle sudden increases in workload efficiently. Regular testing and monitoring are crucial to identifying potential issues and optimizing the system further.</p><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="ed43d79f-b7b0-433e-a2f4-3660b2526bbc"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="ef17c395-f0b6-44f8-81e0-b3dccfedceb3" class="">
+</p><hr id="5cee8250-b294-4e9a-992c-dd926f8072bf"/><p id="8d1e2803-3daa-46ba-829d-0dba38a7c373" class="">
+</p><h3 id="c8ba8714-00f2-41dc-ab82-af1d190c98d2" class="">Date: <time>@November 10, 2023</time> </h3><h3 id="5fe83c2c-a02b-4327-a0ef-fe8f7390dd58" class="">Question 12</h3><h3 id="310cfa35-bd34-4b08-8a73-c47782ad196a" class="">Steps</h3><p id="778680ee-28d0-4827-aafa-b8290cecc52b" class="">Implementing effective error handling and retry strategies is crucial for maintaining the reliability and robustness of an order processing system. Here are some considerations and strategies:</p><ol type="1" id="02bc4d48-e603-4186-9b4e-ab0f60d6843a" class="numbered-list" start="1"><li><em>Error Handling in Lambda Functions:</em><ul id="d7e70735-351c-4785-b2ae-9a095d323c13" class="bulleted-list"><li style="list-style-type:disc"><em>Use Try-Catch Blocks:</em> Wrap critical sections of your Lambda function code with try-catch blocks to catch and handle exceptions.</li></ul><ul id="7ee00639-de10-4c9e-bfe1-9f6d7cac3428" class="bulleted-list"><li style="list-style-type:disc"><em>Custom Error Messages:</em> Provide clear and informative error messages to aid in troubleshooting.</li></ul></li></ol><ol type="1" id="c6b7cd33-070f-4a0b-b816-0ffbb2876004" class="numbered-list" start="2"><li><em>Automatic Retries with SQS:</em><ul id="457d38bb-9ef5-4c79-bc8e-59c43f4228da" class="bulleted-list"><li style="list-style-type:disc"><em>Dead Letter Queues (DLQ):</em> Configure a Dead Letter Queue for your SQS queues. Messages that repeatedly fail processing attempts are moved to the DLQ, allowing you to analyze and address the root cause.</li></ul><ul id="c5499377-a55f-43a2-b79e-5dda2900fd59" class="bulleted-list"><li style="list-style-type:disc"><em>Retry Policy:</em> Implement a retry policy for messages in the SQS queue. Configure the queue to automatically retry processing failed messages after a certain delay. Adjust the number of retries and delays based on the nature of the errors.</li></ul></li></ol><ol type="1" id="84633531-72fc-4658-ba45-9dc27aaa439b" class="numbered-list" start="3"><li><em>Exponential Backoff:</em><ul id="77d01b38-1db5-4018-8665-d4f5d0f66ea1" class="bulleted-list"><li style="list-style-type:disc"><em>Retry with Increasing Delays:</em> Implement an exponential backoff strategy for retries. This means that if a processing attempt fails, the system waits for an increasing amount of time before retrying. This helps prevent overwhelming downstream services with repeated rapid retries.</li></ul></li></ol><ol type="1" id="0c8d1707-be68-4d0a-9c99-12adc4889f91" class="numbered-list" start="4"><li><em>CloudWatch Alarms and Metrics:</em><ul id="5c7eae4d-384e-423a-80e1-6dfcd98e00ca" class="bulleted-list"><li style="list-style-type:disc"><em>Set Up Alarms:</em> Configure CloudWatch alarms to monitor key metrics, such as the number of failed Lambda invocations or the size of the DLQ. Set up alarms to notify the team when error rates exceed a certain threshold.</li></ul><ul id="7eca7e1c-2f70-4fad-9f0d-a18233a538f8" class="bulleted-list"><li style="list-style-type:disc"><em>Custom Metrics:</em> Instrument your Lambda functions and other components to emit custom metrics. This can help you track specific error conditions and performance metrics.</li></ul></li></ol><ol type="1" id="596e77ab-a88e-4c52-a777-bc4db8060218" class="numbered-list" start="5"><li><em>Logging and Auditing:</em><ul id="f8b82bc3-9a4d-40c9-b928-ceef7bb37749" class="bulleted-list"><li style="list-style-type:disc"><em>CloudWatch Logs:</em> Ensure that your Lambda functions log relevant information, including errors, to CloudWatch Logs. This provides a valuable resource for debugging and analyzing issues.</li></ul><ul id="76952bbd-b4d8-45e0-950e-354ac4226d45" class="bulleted-list"><li style="list-style-type:disc"><em>Audit Trail:</em> Maintain an audit trail of processing attempts and outcomes. This can assist in identifying patterns and trends in errors.</li></ul></li></ol><ol type="1" id="5c082348-1a43-49e2-a55a-16b92f01ad0a" class="numbered-list" start="6"><li><em>Notification Systems:</em><ul id="e4359723-1295-453c-b176-27c9befa3b62" class="bulleted-list"><li style="list-style-type:disc"><em>SNS (Simple Notification Service):</em> Integrate AWS SNS to send notifications to a designated team or individuals when critical errors occur. SNS can trigger notifications through various channels, including email, SMS, or even triggering other Lambda functions.</li></ul><ul id="21b2bd68-4c35-4394-89c7-6096443d6b64" class="bulleted-list"><li style="list-style-type:disc"><em>Integration with Incident Management Tools:</em> Consider integrating error notifications with incident management tools like PagerDuty or OpsGenie for a more comprehensive response to critical issues.</li></ul></li></ol><ol type="1" id="d0baa8fc-5cb7-4f36-84bb-9226dd7f1515" class="numbered-list" start="7"><li><em>Monitoring and Continuous Improvement:</em><ul id="569ae302-bbb3-43c3-895a-818dbe46f604" class="bulleted-list"><li style="list-style-type:disc"><em>Automated Monitoring:</em> Implement automated monitoring of your entire order processing pipeline to detect anomalies and errors promptly.</li></ul><ul id="9882145b-b2c9-471d-9882-3e80ba109e28" class="bulleted-list"><li style="list-style-type:disc"><em>Regular Review and Improvement:</em> Conduct regular reviews of error logs, metrics, and notifications. Use the insights gained to continually refine your error handling and retry strategies.</li></ul></li></ol><p id="3cee9048-edc6-4a77-96ce-400c3985c167" class="">By combining these strategies, you can build a resilient order processing system that not only automatically retries failed processing attempts but also notifies the appropriate teams for further investigation and resolution. Regularly reviewing and refining these strategies based on real-world observations will contribute to the overall reliability of the system.</p><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="65d31495-29f9-45e2-92fb-2fbad88b523c"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="432a07f3-3987-4f16-b0cb-c9d7d4ea280c" class="">
+</p><hr id="ebe88edf-29b4-49de-80f8-750af8fca2b0"/><p id="e05fa637-893c-47a4-9d01-cad27789931d" class="">
+</p><h3 id="8b620f1c-49a0-4831-bef4-915270d9648f" class="">Date: <time>@November 10, 2023</time> </h3><h3 id="aa3943a2-7130-41e2-8cdf-55934d773f9a" class="">Question 13</h3><h3 id="5e3a8f0b-0450-4cfc-b111-1ea8f6c8685a" class="">Steps</h3><p id="eb7e9e67-f235-403e-8380-525538a67bc6" class="">Managing the budget for an order processing system on AWS involves setting up effective cost monitoring, budget alerts, and usage reports. Here are steps and best practices for cost management:</p><h3 id="c498147b-ffb0-4dab-9b98-b5163e054872" class="">1. <em>Cost Monitoring:</em></h3><ul id="be65c57a-8d7a-41cf-8ac9-fae9bb710593" class="bulleted-list"><li style="list-style-type:disc"><em>AWS Cost Explorer:</em> Utilize AWS Cost Explorer to visualize, understand, and analyze your AWS costs. This service provides an interactive interface to explore your historical spending patterns and identify cost trends.</li></ul><ul id="5963fca6-0d70-4ebc-a94c-c9f5a8255e69" class="bulleted-list"><li style="list-style-type:disc"><em>Cost Allocation Tags:</em> Tag your resources with meaningful cost allocation tags. This enables you to break down costs by different dimensions, such as environment (e.g., production, development), department, or project.</li></ul><h3 id="9bfb2315-a3e3-4b6c-9a5f-91464cd451b1" class="">2. <em>Budgets and Alerts:</em></h3><ul id="bdf5f6cc-0502-48cb-ae90-0d4df2f79bbc" class="bulleted-list"><li style="list-style-type:disc"><em>Set Budgets:</em> Establish AWS Budgets to define the maximum amount you are willing to spend on specific AWS services or resources. Budgets can be set monthly, quarterly, or annually.</li></ul><ul id="09b4620a-6cea-4e39-b8b6-e60f35ffc5d6" class="bulleted-list"><li style="list-style-type:disc"><em>Budget Actions:</em> Configure budget actions to trigger notifications or automated responses when certain cost thresholds are reached. For example, you can receive an alert when you are projected to exceed 80% of your budget.</li></ul><h3 id="90e461e8-a1f8-4823-87b7-18f3f7c5b21d" class="">3. <em>Usage Reports:</em></h3><ul id="08e2607e-5a47-4e6b-8ae1-4799ab845c16" class="bulleted-list"><li style="list-style-type:disc"><em>AWS Cost and Usage Reports:</em> Enable and configure AWS Cost and Usage Reports to receive detailed information about your AWS usage and associated costs. This can be stored in an Amazon S3 bucket for further analysis.</li></ul><ul id="ef10a998-3fb8-4a52-9219-c5f9b84d554c" class="bulleted-list"><li style="list-style-type:disc"><em>Granular Reporting:</em> Use the detailed reports to understand the costs associated with individual services, such as Lambda, SQS, and DynamoDB. Identify areas where costs can be optimized.</li></ul><h3 id="b0c1ecc4-77c8-4f46-a64b-4d88df8cd01a" class="">4. <em>Lambda Function Configuration:</em></h3><ul id="e8c8f85f-3a46-45ad-87ef-fcf854e473c6" class="bulleted-list"><li style="list-style-type:disc"><em>Memory and Timeout Settings:</em> Optimize the memory and timeout settings for your Lambda functions. Over-allocating resources can increase costs. Monitor function performance and adjust these settings based on actual requirements.</li></ul><ul id="905cc4b6-a6f8-4be3-b883-2b633d1ede4e" class="bulleted-list"><li style="list-style-type:disc"><em>Cold Starts:</em> Understand and mitigate the impact of cold starts on Lambda function performance. Consider provisioned concurrency for critical functions to minimize cold start times.</li></ul><h3 id="df6651f4-ce4e-4002-90f4-9e3bd37e0789" class="">5. <em>SQS Configuration:</em></h3><ul id="523800c7-2390-4a3a-afcc-47ba44c59803" class="bulleted-list"><li style="list-style-type:disc"><em>Message Retention Period:</em> Adjust the message retention period in SQS based on your requirements. Shorter retention periods can reduce storage costs.</li></ul><ul id="505a23b0-a376-4ac7-b1e0-b6229e2a6ebe" class="bulleted-list"><li style="list-style-type:disc"><em>Visibility Timeout:</em> Optimize the visibility timeout to prevent unnecessary reprocessing of messages.</li></ul><h3 id="12ddffc7-805d-4a6f-8163-38ac22f71ed5" class="">6. <em>DynamoDB Configuration:</em></h3><ul id="6f2374c6-b842-4d40-84d0-38711fd4ef38" class="bulleted-list"><li style="list-style-type:disc"><em>Provisioned Throughput:</em> Regularly review and adjust provisioned throughput for your DynamoDB tables based on actual usage patterns. Use on-demand capacity if the workload is variable.</li></ul><ul id="dffdd0af-d27e-4812-8c34-521213b068c2" class="bulleted-list"><li style="list-style-type:disc"><em>Index Usage:</em> Be mindful of the indexes you create and their impact on read and write costs. Unused or unnecessary indexes can be a source of additional costs.</li></ul><h3 id="30d8e86f-47ff-4613-9105-90add36175bb" class="">7. <em>Monitoring and Alerts:</em></h3><ul id="0359426a-b788-41a5-96b0-7b1c7724d2c8" class="bulleted-list"><li style="list-style-type:disc"><em>CloudWatch Alarms:</em> Set up CloudWatch Alarms to monitor key performance metrics for Lambda, SQS, and DynamoDB. This includes metrics related to errors, latency, and throughput.</li></ul><ul id="7ce0a281-b15d-4d71-9e52-bd65a9ac310d" class="bulleted-list"><li style="list-style-type:disc"><em>Automated Actions:</em> Configure automated actions, such as scaling policies, based on CloudWatch Alarms to dynamically adjust resources in response to changing workloads.</li></ul><h3 id="04f2a8af-86b5-4f34-9253-2e7a4dab7bd8" class="">8. <em>Regular Cost Reviews:</em></h3><ul id="889d714e-6a61-49a7-aa27-3f1fa8c528c6" class="bulleted-list"><li style="list-style-type:disc"><em>Regularly Review Costs:</em> Conduct regular reviews of your AWS costs and usage reports. This helps you identify areas for optimization and adjust your budget accordingly.</li></ul><h3 id="3edde57d-b164-4e23-93c4-0659739021f7" class="">9. <em>Cost Optimization Best Practices:</em></h3><ul id="0159fabf-7fcf-4e7e-99cb-e8ae64e5a3c2" class="bulleted-list"><li style="list-style-type:disc"><em>Reserved Instances and Savings Plans:</em> Consider purchasing Reserved Instances or Savings Plans for predictable workloads. This can provide significant cost savings compared to on-demand pricing.</li></ul><ul id="16ff206c-96c3-4fda-a5db-f738038238a5" class="bulleted-list"><li style="list-style-type:disc"><em>Use of Spot Instances:</em> For non-critical or fault-tolerant workloads, consider using Spot Instances to take advantage of cost savings.</li></ul><p id="b19579f7-b3d4-4676-a9a6-668455505110" class="">By implementing these practices, you can effectively monitor and manage the costs associated with Lambda, SQS, and DynamoDB in your order processing system. Regularly reviewing and optimizing your resources based on actual usage patterns will help you stay within budget while maintaining system performance.</p><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="9ee047dd-1c57-4782-ad6a-096e0adfb456"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="d5463f43-91ee-40a0-89ef-2c2cf18a8967" class="">
+</p><hr id="0a822dda-8437-4b84-95c1-16f7b10f3a78"/><p id="ddfb2b86-c304-443e-a09f-886897bac585" class="">
+</p><h3 id="d05be68c-8e97-4747-a620-9005d8c96e49" class="">Date: <time>@November 10, 2023</time> </h3><h3 id="e05c1151-1820-4c6b-a05f-b0aea31066cd" class="">Question 14</h3><h3 id="cfc20284-a57a-4b66-a9d0-ae01f97a4176" class="">Steps</h3><p id="8378e96b-0a45-4399-bbbd-2a0dc44c44fc" class="">Setting up a DynamoDB trigger to invoke a Lambda function when changes occur in a DynamoDB table involves using DynamoDB Streams in combination with AWS Lambda. Here&#x27;s a step-by-step guide to setting it up, followed by an explanation of different trigger types and example use cases for each.</p><h3 id="52b4b0a4-589e-4382-87d5-1681b8155427" class=""><strong>Setting Up a DynamoDB Trigger with Lambda</strong></h3><ol type="1" id="2f1143bd-c2a4-449a-a53d-b498076437cd" class="numbered-list" start="1"><li><strong>Enable DynamoDB Streams on Your Table</strong>:<ul id="7a6f40b4-ad46-4a36-9630-6688d5ca3fb7" class="bulleted-list"><li style="list-style-type:disc">Go to the AWS Management Console, navigate to the DynamoDB section, and select your table.</li></ul><ul id="c01ce35c-4b02-4c7c-b807-3c16ca90a9b6" class="bulleted-list"><li style="list-style-type:disc">In the table settings, enable DynamoDB Streams. You can choose the type of information the stream captures (e.g., keys only, new image, old image, or both new and old images).</li></ul></li></ol><ol type="1" id="45f4748d-0a8d-4d4d-a17c-cf12f14675f9" class="numbered-list" start="2"><li><strong>Create a Lambda Function</strong>:<ul id="4cffcf47-b467-4f7b-9585-5cb0dc2662ea" class="bulleted-list"><li style="list-style-type:disc">Go to the AWS Lambda console and create a new function.</li></ul><ul id="659b1c48-d4de-457b-9a1d-f4b21a170d38" class="bulleted-list"><li style="list-style-type:disc">Choose the runtime environment and provide the code for your Lambda function. This function will process the data from the DynamoDB Stream.</li></ul></li></ol><ol type="1" id="6f80c00f-fd0b-4c5a-bd36-045682a6720d" class="numbered-list" start="3"><li><strong>Set the DynamoDB Stream as a Trigger</strong>:<ul id="d50be79e-6d4a-4d38-8e63-5f9cc0144826" class="bulleted-list"><li style="list-style-type:disc">In the Lambda function configuration, add a trigger. Select DynamoDB from the list of available triggers.</li></ul><ul id="48dff322-ba03-49e3-873f-485afbf748dc" class="bulleted-list"><li style="list-style-type:disc">Configure the trigger by selecting the DynamoDB table and stream. You also need to define the batch size, which is the number of records the Lambda function will process at once.</li></ul></li></ol><ol type="1" id="a117df34-b9c3-4467-bd3a-2a968e2774aa" class="numbered-list" start="4"><li><strong>Deploy and Test</strong>:<ul id="6c7ac268-78fd-4fe9-89f1-bce8ca2e20b0" class="bulleted-list"><li style="list-style-type:disc">Deploy your Lambda function.</li></ul><ul id="dbd236ad-2fb6-4c16-8307-30592e4f25d1" class="bulleted-list"><li style="list-style-type:disc">Perform operations (create, update, delete) on your DynamoDB table to generate stream records and test if the Lambda function is triggered as expected.</li></ul></li></ol><h3 id="159f7c7b-9de0-4118-abc6-e7e36cd58d7d" class=""><strong>Trigger Types</strong></h3><ol type="1" id="b0e03b3b-031d-4f6c-97f6-682a05a9242f" class="numbered-list" start="1"><li><strong>Stream-based Trigger</strong>:<ul id="5ff904d5-1b38-4d28-842f-a3f3dd89226b" class="bulleted-list"><li style="list-style-type:disc"><strong>Description</strong>: This trigger is event-driven. When a change (insert, modify, delete) occurs in a DynamoDB table, the corresponding stream record is generated and the Lambda function is invoked in near real-time.</li></ul><ul id="46593abe-7a6e-42bb-9930-2ad7074d83dd" class="bulleted-list"><li style="list-style-type:disc"><strong>Use Case Example</strong>: A real-time dashboard that reflects changes in data. For instance, if you have a table storing inventory data, a Lambda function can update a dashboard in real-time whenever inventory levels change.</li></ul></li></ol><ol type="1" id="a8ed2e20-dd2e-41ea-9174-15f972c37c8b" class="numbered-list" start="2"><li><strong>Batch-based Trigger (Poll-based)</strong>:<ul id="7f14a457-4411-4f78-b4ef-9fa90959016d" class="bulleted-list"><li style="list-style-type:disc"><strong>Description</strong>: In this scenario, changes are not processed in real-time. Instead, the Lambda function polls the DynamoDB Stream at regular intervals and processes records in batches. This is a built-in feature of DynamoDB and Lambda integration, where Lambda polls the stream and invokes your function synchronously when there are records to process.</li></ul><ul id="c3d5a9fb-a1ad-4be6-bb37-0ff1eaee6025" class="bulleted-list"><li style="list-style-type:disc"><strong>Use Case Example</strong>: A batch processing system for data aggregation. Imagine a scenario where you&#x27;re collecting user activity data in a DynamoDB table. A Lambda function can be configured to run at regular intervals, aggregating this data and updating a separate analytics table or system.</li></ul></li></ol><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="a8cfc853-5498-4203-ae83-f6acecb12749"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="0e8f419b-9caa-4f15-a0d6-1cef51a5ce8e" class="">
+</p><hr id="f7ae3294-7073-439c-ae8d-9a06bbfbfd54"/><p id="e5d97456-e7dc-4a10-94f1-bedff7325d35" class="">
+</p><h3 id="c4d4b1a5-ea15-45c1-afba-08690310bdbf" class="">Date: <time>@November 11, 2023</time> </h3><h3 id="305fd9cb-8bf5-4b54-856f-325686a572e5" class="">Question 15</h3><h3 id="85f03b97-e02e-41a0-a6e7-ca57998ef666" class="">Steps</h3><ul id="e1792e19-0617-41e0-bab0-e17b68769dc8" class="bulleted-list"><li style="list-style-type:disc">Create a DynamoDB table named ‘tabul’ with the partition key as ‘id’ and as a string.</li></ul><ul id="32134cd0-e83f-4bba-a12e-9be8eeea4750" class="bulleted-list"><li style="list-style-type:disc">Create a lambda function in Python and attach the IAM role. </li></ul><ul id="3e83e0a9-587a-4f38-9dc8-3d23363e9f3a" class="bulleted-list"><li style="list-style-type:disc"></li></ul><pre id="34901ef6-ba26-4507-91c8-b498d7b28ea7" class="code"><code>import json
+import boto3
+
+def lambda_handler(event, context):
+    records = event.get(&#x27;Records&#x27;, [])
+    dynamodb_table = boto3.resource(&#x27;dynamodb&#x27;).Table(&#x27;tabul&#x27;)
+
+    for record in records:
+        json_data = json.loads(record[&#x27;body&#x27;])
+        item = {
+            &#x27;id&#x27;: json_data.get(&#x27;id&#x27;),
+            &#x27;name&#x27;: json_data.get(&#x27;name&#x27;),
+            &#x27;value&#x27;: json_data.get(&#x27;value&#x27;)
+        }
+
+        print(item)
+        dynamodb_table.put_item(Item=item)
+
+    return {&#x27;statusCode&#x27;: 200, &#x27;body&#x27;: &#x27;Data stored in DynamoDB successfully!&#x27;}</code></pre><ul id="066fdd4a-6cd5-4c0a-9d0c-a008b9acbc71" class="bulleted-list"><li style="list-style-type:disc">Test Case</li></ul><pre id="1ef7d4bc-ccf6-41e7-9e33-072989204a44" class="code"><code>{
+  &quot;Records&quot;: [
+    {
+      &quot;body&quot;: &quot;{\&quot;id\&quot;: \&quot;5\&quot;, \&quot;name\&quot;: \&quot;Test Item\&quot;, \&quot;value\&quot;: 789}&quot;
+    }
+  ]
+}</code></pre><ul id="57e7d205-0560-4ecc-9864-407e594b3a23" class="bulleted-list"><li style="list-style-type:disc"></li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="b6bdeb2a-2792-4a6a-9a90-d79bb71c8ea9"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="fdf38be5-bb2d-40fe-9687-6edac0cdcbb5" class="">
+</p><hr id="b7f0b135-6ea3-4722-8288-3bbebb12d84e"/><p id="be528af1-503a-459c-b469-42d24396d0b6" class="">
+</p><h3 id="d51132df-ae21-401d-be9e-a36aee47d650" class="">Date: <time>@November 11, 2023</time> </h3><h3 id="20729d09-5dd7-43a9-b6bb-31ca0d6e189d" class="">Question  </h3><p id="9e65e285-0d8b-4030-9e98-096ad09c9bdf" class="">27</p><h3 id="cb1d3993-eac1-4560-a715-67c7b2286e5e" class="">Steps</h3><ul id="09b3435b-40bc-472a-b4ff-f00fba914376" class="bulleted-list"><li style="list-style-type:disc">Create VPC → VPC only</li></ul><ul id="112aeec7-b253-4a26-9944-a846634a0191" class="bulleted-list"><li style="list-style-type:disc">VPC CIDR Block: 10.0.0.0/16 → Create</li></ul><ul id="6e965803-c5d7-47db-a17f-9bf8c097abfd" class="bulleted-list"><li style="list-style-type:disc">Subnet<ul id="9a15e139-e516-4bff-a36e-5f1608c8ca64" class="bulleted-list"><li style="list-style-type:circle">Create</li></ul><ul id="45dd6ea6-f430-4dc5-b74e-f0d58dc7d3b8" class="bulleted-list"><li style="list-style-type:circle">name: Public-1a → 10.0.0.0/24 (us-east-1a)</li></ul><ul id="44d27c60-85dd-46c0-b2a0-39ea92889a78" class="bulleted-list"><li style="list-style-type:circle">name: Private-1a → 10.0.1.0/24 (us-east-1b)</li></ul></li></ul><ul id="9b4431b5-be69-47b0-a671-0253d6850bba" class="bulleted-list"><li style="list-style-type:disc">Internet Gateway<ul id="7d1669e6-61c1-4d62-bf00-b7a26699ae27" class="bulleted-list"><li style="list-style-type:circle">Create → Attach to VPC</li></ul></li></ul><ul id="59e90bb1-61e2-43f4-bf81-798510ae0135" class="bulleted-list"><li style="list-style-type:disc">Route Table<ul id="ac3357cc-7b2d-4e4b-a53e-febf157e3744" class="bulleted-list"><li style="list-style-type:circle">name : Public → create</li></ul><ul id="53ed3079-38e1-457b-baeb-a3fba836e1b0" class="bulleted-list"><li style="list-style-type:circle">Subnet Association → edit subnet association → add public subnet</li></ul><ul id="cdf8031a-5fd9-4d7d-aa42-b2baa990aea7" class="bulleted-list"><li style="list-style-type:circle">Routes → Add route </li></ul><ul id="e57532f3-d265-4046-a0f5-52528d0eddab" class="bulleted-list"><li style="list-style-type:circle"></li></ul><figure id="d628c170-94fa-4dff-bbb3-4888005a9958" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%201.png"><img style="width:1242px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%201.png"/></a></figure><p id="44130ab3-25c4-4300-ad1f-0abe1a2742d6" class="">
+</p></li></ul><ul id="e055668c-ca74-4b05-bfe2-635a3702e855" class="bulleted-list"><li style="list-style-type:disc">Security Group<ul id="e31fce35-1716-4ebc-9275-f30a8d54f9f3" class="bulleted-list"><li style="list-style-type:circle">Create → VPC daalo</li></ul><ul id="1a46e5c3-85d3-4261-b1fc-4827061c5c86" class="bulleted-list"><li style="list-style-type:circle">Inbound rules</li></ul><figure id="782e1548-37a5-4104-9e1a-5636851f7ac5" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%203.png"><img style="width:1801px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%203.png"/></a></figure></li></ul><ul id="ffc83343-c7f4-481f-9b61-6b9c9086d323" class="bulleted-list"><li style="list-style-type:disc">Key Pair<ul id="c67e707e-1be2-4ce8-9468-8e12d145cf60" class="bulleted-list"><li style="list-style-type:circle">EC2 → Key Pairs → create</li></ul><ul id="90537001-5b05-4a13-a5d9-e0ced9522177" class="bulleted-list"><li style="list-style-type:circle">name: whatevs → PSA → .pem file</li></ul></li></ul><ul id="ed6a00ad-5ebf-410b-86c4-d852befa07bd" class="bulleted-list"><li style="list-style-type:disc">Create EC2 instance<p id="61943cb4-1840-4d39-9661-e959c4950a74" class="">Amazon Machine Image (AMI): Amazon Linux 2
+Instance Type: t2.micro
+Security Group: Use the security group created in step 3.
+Key Pair: Use the key pair generated in step 4.
+IAM Role: Attach an IAM role that allows basic EC2 permissions</p><figure id="e9b7920c-1bd2-4b0b-8d32-bcc41a54e604" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%204.png"><img style="width:432px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%204.png"/></a></figure></li></ul><ul id="972b8193-487b-4d24-a676-6b81cd9b6c25" class="bulleted-list"><li style="list-style-type:disc">Elastic IP<ul id="3cbd8d2a-7a72-4976-bb12-e94f7adc85d7" class="bulleted-list"><li style="list-style-type:circle">Go to elastic IP → Allocate</li></ul><ul id="98675c10-e599-4335-a05a-4a0fadfce1b4" class="bulleted-list"><li style="list-style-type:circle">Then Select newly created IP address → Actions → Assocaite → VPC daal do</li></ul></li></ul><ul id="b5d58558-9bf1-4ccd-961a-3090589a7e34" class="bulleted-list"><li style="list-style-type:disc">Last step pata nhi chal rha <span class="user">@Kallind Soni</span> </li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="2a36f1a1-6ddf-4194-bfe5-5141037a4fe4"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="985110cc-f341-4363-8f71-65d5d518c3f3" class="">
+</p><hr id="cf4c78b5-b590-497e-94c4-c2bf8cc655e7"/><p id="16b9c04d-5474-4561-9d17-e73910fe8937" class="">
+</p><h3 id="9ea63891-8355-495a-ab15-867eb4fcab08" class="">Date: <time>@November 16, 2023</time> </h3><h3 id="b520a5bf-954d-49c7-91e6-200b27f7f586" class="">Question 2</h3><h3 id="13bc6e2f-e0df-4004-93b5-47396304da63" class="">Steps</h3><ul id="828d3ddd-87ec-41cc-ae6e-f14710ed0dd8" class="bulleted-list"><li style="list-style-type:disc"></li></ul><p id="37770541-79d2-4b88-83be-aec06f7d9d4f" class="">Click &quot;Create table.&quot;<div class="indented"><ul id="e3a348ae-b0f9-4a98-a757-5317e9a62bbb" class="bulleted-list"><li style="list-style-type:disc">Table name: <code><strong>EmailSubscriptions</strong></code></li></ul><ul id="9f6bb495-636f-46ab-ba14-525ae726895e" class="bulleted-list"><li style="list-style-type:disc">Primary key: <code><strong>Email</strong></code> (String)</li></ul><ul id="cf5e6819-a0e4-4728-8853-6eba741d306b" class="bulleted-list"><li style="list-style-type:disc">Click &quot;Create.&quot;</li></ul></div></p><ul id="514e96d7-9197-47cf-8a62-ec196c7f324f" class="bulleted-list"><li style="list-style-type:disc">Open SES → Get Started</li></ul><ul id="cc90cd62-2dbf-48eb-8862-0648d813f3ff" class="bulleted-list"><li style="list-style-type:disc">Enter your email id (domain mei bhi email hi) → continue → create</li></ul><ul id="14946243-4592-4f01-b3d2-3393bcdbfb60" class="bulleted-list"><li style="list-style-type:disc">Verify email id (mail aayega)</li></ul><ul id="ccfccbe0-6d26-4ada-92a8-7ff1e45fb930" class="bulleted-list"><li style="list-style-type:disc">Configurations → Configuration Set</li></ul><ul id="c8badcd9-3f9b-4063-8a53-973567f04e8a" class="bulleted-list"><li style="list-style-type:disc">Name it <code><strong>EmailSubscriptionConfigSet</strong></code> and click &quot;Create.&quot;</li></ul><ul id="bde384e7-27ee-4609-bddd-0404ae0d086f" class="bulleted-list"><li style="list-style-type:disc">Lambda → create </li></ul><ul id="f7cb5a30-9f7a-4a85-a96f-a02b497b109b" class="bulleted-list"><li style="list-style-type:disc">Function name: <code><strong>EmailSubscriptionFunction</strong></code></li></ul><ul id="ee916b30-5ba1-4b13-9ecf-50a5d19844f6" class="bulleted-list"><li style="list-style-type:disc">Runtime: <code><strong>Python 3.8</strong></code> (or your preferred runtime)</li></ul><ul id="1ba69ad1-79fe-46e7-b8ed-5a230b194578" class="bulleted-list"><li style="list-style-type:disc">Role: Choose an existing role with basic Lambda permissions.</li></ul><ul id="040a2b6d-9da7-4bb4-96d5-f2020765a982" class="bulleted-list"><li style="list-style-type:disc">Click &quot;Create function.&quot;</li></ul><pre id="c26672b5-d064-4281-8edc-efab57410797" class="code"><code>import json
+import boto3
+
+dynamoDB = boto3.resource(&#x27;dynamodb&#x27;).Table(&#x27;EmailSubscriptions&#x27;)
+ses = boto3.client(&#x27;ses&#x27;)
+
+def lambda_handler(event, context):
+    email = json.loads(event[&#x27;body&#x27;])[&#x27;email&#x27;]
+    dynamoDB.put_item(Item={&#x27;Email&#x27;: email})
+    
+    ses.send_email(
+        Source=&#x27;ajmerajay.ja@gmail.com&#x27;, #apna daalna chutiye
+        Destination={&#x27;ToAddresses&#x27;: [email]},
+        Message={
+            &#x27;Subject&#x27;: {&#x27;Data&#x27;: &#x27;Subscription Confirmation&#x27;},
+            &#x27;Body&#x27;: {&#x27;Text&#x27;: {&#x27;Data&#x27;: &#x27;Thank you for subscribing!&#x27;}}
+        }
+    )
+
+    return {
+        &#x27;statusCode&#x27;: 200,
+        &#x27;body&#x27;: json.dumps(&#x27;Email subscribed successfully&#x27;)
+    }</code></pre><ul id="b76ac19b-4aa0-430d-a5c7-a00079f0f439" class="bulleted-list"><li style="list-style-type:disc">Deploy kar dena</li></ul><ul id="662cb274-850a-4567-a0c3-50a6b8bbf7e5" class="bulleted-list"><li style="list-style-type:disc">API Gateway → API name: <code><strong>EmailSubscriptionAPI</strong></code></li></ul><ul id="afdf40a7-45c4-4ce1-a6ac-f5224fb02c98" class="bulleted-list"><li style="list-style-type:disc">Create resource ‘subscribe’ → create method </li></ul><ul id="b2a4ac06-76ab-46a3-a21e-9532dc3c78d7" class="bulleted-list"><li style="list-style-type:disc">Integration type: <code><strong>Lambda Function</strong></code></li></ul><ul id="95e74589-abc4-4aff-8e10-5d54c5a9321b" class="bulleted-list"><li style="list-style-type:disc">Lambda Function: <code><strong>EmailSubscriptionFunction</strong></code></li></ul><ul id="b8bc6390-e841-4926-a20b-0002f1c13646" class="bulleted-list"><li style="list-style-type:disc">Click &quot;Create.&quot;</li></ul><ul id="354decaa-0c09-4483-ae6f-be833c7ac3ad" class="bulleted-list"><li style="list-style-type:disc">Deploy (naya stage bana lena)</li></ul><ul id="414765f7-1d15-4ad9-8478-84e9903b695b" class="bulleted-list"><li style="list-style-type:disc">Postman</li></ul><ol type="1" id="257ad03b-43c0-4e61-beb3-b1c8e33b69b7" class="numbered-list" start="1"><li>Open Postman.</li></ol><ol type="1" id="69b65017-c82b-4b80-9d96-6f263fecaa86" class="numbered-list" start="2"><li>Create a new POST request.</li></ol><p id="3c5a2463-d11b-430d-b451-b66d752d6704" class="">Test Case:</p><p id="2506aa7c-3a37-4f48-bdba-96190a826c12" class="">{
+&quot;body&quot;: &quot;{\&quot;email\&quot;: \&quot;<a href="mailto:ajmerajay.ja@gmail.com">ajmerajay.ja@gmail.com</a>\&quot;}&quot;
+}</p><figure id="a38f7c8f-a3b2-4eb5-9bf7-3ec8dc384ad0" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%205.png"><img style="width:640px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%205.png"/></a></figure><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="a2951ea1-a38d-42e1-902a-73b53f955997"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="4680a709-4dab-4de9-9c97-990bc403fc81" class="">
+</p><hr id="ede59a69-a00a-42a4-ba48-feab04a7de0b"/><p id="5c7b2f40-eb0d-4518-b80a-54927c83c271" class="">
+</p><h3 id="899854fd-dd9a-4f38-a419-934cd3b1a8dd" class="">Date: <time>@November 16, 2023</time> </h3><h3 id="7bc8786e-e483-4236-b3e9-2112a6b73afa" class="">Question  16</h3><h3 id="dd5233de-0597-48e5-ba07-4dc8c2e63454" class="">Steps</h3><ul id="a5c37f1e-cb29-4827-867a-1bdc63c2793c" class="bulleted-list"><li style="list-style-type:disc">Create S3 bucket</li></ul><ul id="fc09a6bb-1821-41b3-982c-c267688d2f11" class="bulleted-list"><li style="list-style-type:disc">Make bucket public (optional)</li></ul><ul id="15514889-4145-4725-96e2-74ba0d81f769" class="bulleted-list"><li style="list-style-type:disc">Lambda function banao:</li></ul><pre id="826b1cda-3005-412e-9788-7902eabff67b" class="code"><code>import json
+import boto3
+
+
+ses = boto3.client(&#x27;ses&#x27;)
+sns = boto3.client(&#x27;sns&#x27;)
+
+def lambda_handler(event, context):
+    try:
+        email = &#x27;ajmerajay.ja@gmail.com&#x27;
+
+
+        # Send confirmation email using SES
+        send_confirmation_email(email)
+
+        # Publish to SNS
+        sns.publish(
+            TopicArn=&#x27;arn:aws:sns:ap-south-1:540280354050:q16&#x27;,  # Replace with your SNS topic ARN
+            Message=&#x27;File processing is complete!&#x27;,
+            Subject=&#x27;File Processing Notification&#x27;
+        )
+
+        return {
+            &#x27;statusCode&#x27;: 200,
+            &#x27;body&#x27;: json.dumps(&#x27;Email subscribed successfully&#x27;)
+        }
+    except Exception as e:
+        print(f&quot;Error: {e}&quot;)
+        return {
+            &#x27;statusCode&#x27;: 500,
+            &#x27;body&#x27;: json.dumps(&#x27;Error subscribing email&#x27;)
+        }
+
+def send_confirmation_email(email):
+    # Replace with the email you verified in SES
+    sender_email = &#x27;ajmerajay.ja@gmail.com&#x27;
+    subject = &#x27;Subscription Confirmation&#x27;
+    body_text = f&#x27;Thank you for subscribing to our newsletter!&#x27;
+
+    ses.send_email(
+        Source=sender_email,
+        Destination={&#x27;ToAddresses&#x27;: [email]},
+        Message={
+            &#x27;Subject&#x27;: {&#x27;Data&#x27;: subject},
+            &#x27;Body&#x27;: {&#x27;Text&#x27;: {&#x27;Data&#x27;: body_text}}
+        }
+    )
+
+    print(f&quot;Confirmation email sent to {email}&quot;)</code></pre><ul id="d1011df6-e380-4335-b7c1-6c50905aa4ff" class="bulleted-list"><li style="list-style-type:disc">SNS<ul id="7add8ad3-51f9-4413-9a9f-801f530884a8" class="bulleted-list"><li style="list-style-type:circle">new topic → standard → create</li></ul><ul id="537252a8-9a4b-4ab0-9636-a66eceb36899" class="bulleted-list"><li style="list-style-type:circle">in created topic → create subscription</li></ul><ul id="faec7d69-a799-4609-b3b4-761b8593137f" class="bulleted-list"><li style="list-style-type:circle">mail pe approve bhi kar dena kuch toh aayega create subscription ke baad</li></ul><figure id="f19a3657-1759-4911-9124-0223aa8b9c3b" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%206.png"><img style="width:528px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%206.png"/></a></figure></li></ul><ul id="63a4fe9c-eefc-4c86-9daf-64f7c99039a0" class="bulleted-list"><li style="list-style-type:disc">go to s3 bucket<ul id="a7741460-fee1-465d-830e-f94633f26b31" class="bulleted-list"><li style="list-style-type:circle">properties → event notification → create</li></ul><ul id="cb095657-3e70-46a3-a865-e0dab2269bef" class="bulleted-list"><li style="list-style-type:circle"><strong>Name:</strong> Enter a name (e.g., <code><strong>q16</strong></code>).</li></ul><ul id="dcedea2e-99b0-414c-ad22-15810b0dadba" class="bulleted-list"><li style="list-style-type:circle"><strong>Events:</strong> Choose &quot;All objects create events.&quot;</li></ul><ul id="59ed1eac-dd48-444e-a1bf-b4356e423738" class="bulleted-list"><li style="list-style-type:circle"><strong>Send to:</strong> Choose &quot;Lambda Function.&quot; → jo lambda banaya wo</li></ul></li></ul><ul id="e7fac326-5bcf-4324-9d23-1d897fee62a2" class="bulleted-list"><li style="list-style-type:disc">Whenever u add in the s3 bucket mail aayenge</li></ul><figure id="db26c9be-782b-463d-a629-169b01921edc" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%207.png"><img style="width:1229px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%207.png"/></a></figure><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="06cd6102-e4c0-49be-af64-8130dd5ae3bc"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="d5ad49ec-9f59-4183-9e1d-d02dc3029df4" class="">
+</p><hr id="44265f98-6e19-4f47-9f78-ea4747eb8e2d"/><p id="743936de-b97f-4729-b835-8daeb034387d" class="">
+</p><h3 id="8deb5ae6-60eb-41b8-8f79-24ef08b35901" class="">Date: <time>@November 16, 2023</time> </h3><h3 id="b0b453c8-c8f8-4350-968a-a7d98eb01043" class="">Question  28</h3><h3 id="70ab83a3-183b-4bf4-838d-ab99571d87aa" class="">Steps</h3><ul id="5cc153af-e3c0-4908-9a5a-e0c4415a066e" class="bulleted-list"><li style="list-style-type:disc"><strong><strong>Launch a New EC2 Instance</strong></strong></li></ul><p id="a386369b-6ca1-41ba-8b23-54d627c841cd" class="">Console pe ec2 instance banao, toh ye sab jo bhi daaloge woh same idhar daalna. (console pe launch mat karna bass)</p><pre id="fb769490-1d38-4c2b-9a6f-47622d8b300a" class="code"><code>aws ec2 run-instances
+ --image-id ami-02a2af70a66af6dfb
+ --instance-type t2.micro
+ --key-name demo-server
+ --security-group-ids sg-008ac0d2cbf0a08f0
+ --subnet-id subnet-0b3cd6235fe0b3310</code></pre><figure id="5d1654cf-f8cc-4609-851e-473c3de24968" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%208.png"><img style="width:1056px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%208.png"/></a></figure><pre id="f0b421c7-bedb-4fa8-8e9f-42d017a58a39" class="code"><code>aws ec2 allocate-address --domain vpc</code></pre><pre id="214be734-2364-430a-858b-b85f0803b9b1" class="code"><code>aws ec2 associate-address \
+    --instance-id i-057fbdd0f1ec4bcad \  # Specify your EC2 instance ID
+    --allocation-id eipalloc-0fb91febd89c7c36e  # Replace with the AllocationId obtained in the previous step</code></pre><pre id="2b60c8c3-8cd3-4817-b779-d1ec302a5968" class="code"><code>ssh ec2-user@13.127.192.239 #you will get ip address in above command.</code></pre><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="b3a8c2aa-058a-49b6-b884-5e2cd9143114"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="0b529114-6ac2-4710-8a0c-d310f20962e3" class="">
+</p><hr id="e01b294d-0846-4f84-8a54-8b44d32105cf"/><p id="e49186ce-8d4c-49fd-9f70-89c0316c49ef" class="">
+</p><h3 id="9685a50b-65af-433a-8aa5-ac7e3cdb390c" class="">Date: <time>@November 17, 2023</time> </h3><h3 id="37c13d75-30ac-4a44-8bdd-da16e43ce3ea" class="">Question  7</h3><h3 id="29d1f526-01c0-40e8-8370-50c6796c5b5d" class="">Steps</h3><ul id="f7158b94-9708-4d2e-b0bb-3043800b7a1a" class="bulleted-list"><li style="list-style-type:disc">10.0.0.0/24, 192.168.1.0/28, and 172.16.0.0/23.</li></ul><ul id="0d272f42-42a7-47ec-8ad7-6d5843a7c193" class="bulleted-list"><li style="list-style-type:disc">32-24 = 8 , 2^8-5 = 256-5 = 251</li></ul><ul id="d9908527-5271-4c1e-aea9-e398dce46199" class="bulleted-list"><li style="list-style-type:disc">32-28 = 4 , 2^4-5 = 16-5 = 9</li></ul><ul id="9a1cf388-9061-4923-a1d4-f6a008b12556" class="bulleted-list"><li style="list-style-type:disc">32 - 23 = 9 ,2^9-5 = 512-5 = 507</li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="e7297ecf-b384-43f0-befd-21b2d154e3de"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="87cb0124-49cf-4423-ab6d-f322db147f8d" class="">
+</p><hr id="5d5bde08-452d-443e-8709-fa80b1e20931"/><p id="9c8ac42e-fb66-471e-a726-9c6bd0b2c0e9" class="">
+</p><h3 id="3e7656b7-6c4a-47e6-a494-912ab2507d82" class="">Date: <time>@November 17, 2023</time> </h3><h3 id="a855dc1a-c0b7-4fa7-bdf1-33ec6f24b6b2" class="">Question  8</h3><h3 id="b069fc19-9090-4986-8e36-9e19835fd965" class="">Steps</h3><ul id="6679fc0f-ed46-45ef-babf-13a6d26f1698" class="bulleted-list"><li style="list-style-type:disc">203.0.113.0/24  , 32-24 = 8 , 251</li></ul><ul id="0668cf4f-0811-4262-98f8-bf3cc2b8ff13" class="bulleted-list"><li style="list-style-type:disc">2^32-25 = 7 , so we do 2^7 = 128 </li></ul><ul id="6a5d826c-3ffb-433a-b919-aee0c51d57a8" class="bulleted-list"><li style="list-style-type:disc">new CIDR = 203.0.113.0/25 and 203.0.113.128/25</li></ul><ul id="56eac187-cbd1-4048-a8de-1b4afc3d2264" class="bulleted-list"><li style="list-style-type:disc">...</li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="faf38e3c-ea10-48a1-8706-0f0076c43323"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="2fae71ce-d28f-4bfd-a551-b26fdd9c3773" class="">
+</p><hr id="6ffcf507-4261-4e7a-8e27-10c311fd9174"/><p id="7826964b-3fed-43dd-a815-ff99574fc9b2" class="">
+</p><h3 id="dd3d41c8-b06e-4004-a5ce-3cf3b96ea736" class="">Date: <time>@November 17, 2023</time> </h3><h3 id="b459b1fe-7a06-45f8-a1c3-408d09abd502" class="">Question  9</h3><h3 id="4a4f6b24-b649-4643-b32b-9c474aa25f5f" class="">Steps</h3><ul id="bfb1d59b-d623-4f96-a48f-a80da347b18b" class="bulleted-list"><li style="list-style-type:disc">192.168.1.0/26, 192.168.1.64/26, and 192.168.1.128/26.</li></ul><ul id="a06219d7-8a29-4090-8476-b5232dcf8446" class="bulleted-list"><li style="list-style-type:disc">.32-26 = 6 , 2^6-5 = 64-5 = 59</li></ul><ul id="8f8529ee-75f3-4536-aa18-a7b330239940" class="bulleted-list"><li style="list-style-type:disc">59 *3 =177</li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="b6113575-2369-40cc-9c5e-8b0b18bae7cc"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="290ca488-f07a-459b-b0d4-1c059d088633" class="">
+</p><hr id="c2859caf-3c00-466c-87cf-a68fecff74d9"/><p id="f9ea0023-42dd-4f53-bfc1-b18af82e76ca" class="">
+</p><h3 id="acad0123-6b15-4864-b163-2d0353299aa3" class="">Date: <time>@November 17, 2023</time> </h3><h3 id="a07cb8be-f99f-46af-b33c-b3723ee2ef12" class="">Question  30 </h3><h3 id="2fde7314-77e9-4d7a-9930-4a9467195b66" class="">Steps</h3><ul id="c97f2f6c-60b6-4e87-b134-27fe16312eb0" class="bulleted-list"><li style="list-style-type:disc">Create a SNS topic  </li></ul><pre id="a4dcd994-2835-4850-a2bd-7e1fe5fcd059" class="code"><code> aws sns create-topic --name MySNSTopic</code></pre><ul id="b4202228-5a3a-45a2-879f-ab22c0462be4" class="bulleted-list"><li style="list-style-type:disc">Create SQS quese </li></ul><pre id="d0770ebb-a553-43d8-bbc5-6d72a0ec7c80" class="code"><code>aws sqs create-queue --queue-name MySQSQueue</code></pre><p id="034b931b-a419-462f-b96a-6f9f59a10f17" class="">
+</p><ul id="9c390fa6-7358-47a4-92b7-7f02a6b26f8a" class="bulleted-list"><li style="list-style-type:disc">Go to console and copy Queue ARN Or <strong>use  this command,</strong> </li></ul><pre id="aed29056-6b02-4296-9fae-80141a93fd50" class="code"><code>arn=$(aws sqs get-queue-attributes --queue-url YourSQSQueueURL --attribute-names QueueArn --output text --query &#x27;Attributes.QueueArn&#x27;)</code></pre><ul id="00247e83-532d-41d9-8a58-d5bad1a77cfb" class="bulleted-list"><li style="list-style-type:disc"><strong> (we need arn and not url , so we use this command )</strong></li></ul><ul id="c752b91b-f588-4fc1-b43c-f6ece464a4ba" class="bulleted-list"><li style="list-style-type:disc">Send message </li></ul><pre id="d45738ce-e445-4995-ba53-25f36af40924" class="code"><code>aws sns publish --topic-arn &lt;TOPIC ARN&gt; --message ‘Hello, this is a test message’</code></pre><ul id="09fb3808-0098-4d0f-981d-6e3d6ff298cf" class="bulleted-list"><li style="list-style-type:disc">Check whether message received or not</li></ul><pre id="f8fb2298-7225-43a2-ba06-f969b59e2978" class="code"><code> aws sqs receive-message --queue-url YourSQSQueueURL</code></pre><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="59e9e50a-a9ab-406e-9b95-78feaaacedd8"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="5cc419db-5e18-4d05-a60f-3ea50aad1af6" class="">
+</p><hr id="2010d4b6-6607-4ed8-9eb0-9ffc75f2bf3a"/><p id="4a0efbcb-09de-4d75-8a68-3a47a8ab4916" class="">
+</p><h3 id="d7f8c709-c2aa-4f95-ae6c-ab5001fe1358" class="">Date: <time>@November 17, 2023</time> </h3><h3 id="7ab5d6fd-ec69-4dfb-b0c9-dd3272da11b6" class="">Question  17</h3><h3 id="edd50ff8-3533-4d66-a3d3-72b72806e0d3" class="">Steps</h3><ul id="08aad705-a2ac-4926-9a86-5e0dcf1a67e9" class="bulleted-list"><li style="list-style-type:disc">Create a lambda function make sure to attach IAM role. </li></ul><pre id="095724e2-1ff2-4b4d-8388-6c7ae97b9c08" class="code"><code>import json
+import boto3
+import urllib.parse
+
+dynamoDB = boto3.resource(&#x27;dynamodb&#x27;).Table(&#x27;q17&#x27;)
+ses = boto3.client(&#x27;ses&#x27;)
+sns = boto3.client(&#x27;sns&#x27;)
+s3 = boto3.client(&#x27;s3&#x27;)
+
+def lambda_handler(event, context):
+    try:
+        # Retrieve S3 bucket and object information from the S3 event
+        bucket = event[&#x27;Records&#x27;][0][&#x27;s3&#x27;][&#x27;bucket&#x27;][&#x27;name&#x27;]
+        key = urllib.parse.unquote_plus(event[&#x27;Records&#x27;][0][&#x27;s3&#x27;][&#x27;object&#x27;][&#x27;key&#x27;])
+        
+        # Retrieve the text data from the uploaded file
+        text_data = get_text_from_s3(bucket, key)
+        print(text_data)
+
+        # Perform basic analysis (word count)
+        words = text_data.split()
+        word_count = len(words)
+        print(word_count)
+
+        # Store results in DynamoDB
+        response = dynamoDB.put_item(
+            Item={
+                &#x27;id&#x27;: &#x27;1&#x27;,  # You might want to generate a unique ID
+                &#x27;count&#x27;: word_count
+            }
+        )
+        email = &#x27;ajmerajay.ja@gmail.com&#x27;
+
+        # Send confirmation email using SES
+        send_confirmation_email(email)
+
+        # Publish to SNS
+        sns.publish(
+            TopicArn=&#x27;arn:aws:sns:ap-south-1:540280354050:q17&#x27;,  # Replace with your SNS topic ARN
+            Message=f&#x27;File processing is complete! Words: {word_count}&#x27;,
+            Subject=&#x27;File Processing Notification&#x27;
+        )
+
+        return {
+            &#x27;statusCode&#x27;: 200,
+            &#x27;body&#x27;: json.dumps(&#x27;Text analysis complete and stored in DynamoDB&#x27;)
+        }
+    except Exception as e:
+        print(f&quot;Error: {e}&quot;)
+        return {
+            &#x27;statusCode&#x27;: 500,
+            &#x27;body&#x27;: json.dumps(&#x27;Error processing text data&#x27;)
+        }
+
+def send_confirmation_email(email):
+    # Replace with the email you verified in SES
+    sender_email = &#x27;ajmerajay.ja@gmail.com&#x27;
+    subject = &#x27;Subscription Confirmation&#x27;
+    body_text = f&#x27;Thank you for subscribing to our newsletter!&#x27;
+
+    ses.send_email(
+        Source=sender_email,
+        Destination={&#x27;ToAddresses&#x27;: [email]},
+        Message={
+            &#x27;Subject&#x27;: {&#x27;Data&#x27;: subject},
+            &#x27;Body&#x27;: {&#x27;Text&#x27;: {&#x27;Data&#x27;: body_text}}
+        }
+    )
+
+    print(f&quot;Confirmation email sent to {email}&quot;)
+
+def get_text_from_s3(bucket, key):
+    # Retrieve the content of the S3 object (text file)
+    response = s3.get_object(Bucket=bucket, Key=key)
+    text_data = response[&#x27;Body&#x27;].read().decode(&#x27;utf-8&#x27;)
+    return text_data</code></pre><p id="ed3a2af2-db48-4dfa-a3e1-72a65591e1df" class="">TEST </p><pre id="74729991-bd5b-448c-921c-85dd64b2cec4" class="code"><code>{
+  &quot;text&quot;: &quot;dhap dhap dahp&quot;
+}</code></pre><ul id="f5e3cef5-9885-4a64-a722-1c4400614684" class="bulleted-list"><li style="list-style-type:disc">Create a S3 bucket with default settings</li></ul><ul id="e1efdcfb-e93c-4d4c-af7b-d63966a9dddb" class="bulleted-list"><li style="list-style-type:disc">Go to the bucket, go to the properties tab and scroll down to the event notification ⇒ Create event notification→and tick the all object create event . scroll down to the destination panel and select lambda function select which lambda from the drop down and click Create.</li></ul><ul id="a414b508-2eae-4c78-aec6-72cae4de8b7d" class="bulleted-list"><li style="list-style-type:disc">go to SQS and Create queue </li></ul><ul id="243733e5-9e26-4573-a401-585af1afafe1" class="bulleted-list"><li style="list-style-type:disc">go to SNS , go to create topic and select standard and click Create topic.</li></ul><ul id="dc4cee3d-212c-414a-9796-aef64cf8394b" class="bulleted-list"><li style="list-style-type:disc">Click on the topic created and click create subscription select protocol as email and enter your email  . Then confirm the email.(mail aayega)</li></ul><figure id="b799c106-235e-410f-9121-6fbafcea8527" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%209.png"><img style="width:576px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%209.png"/></a></figure><ul id="a8087a9c-9e07-4bb5-92b3-9774ac55bc0d" class="bulleted-list"><li style="list-style-type:disc">Create a DynamoDB table, add a primary key and create it.</li></ul><h3 id="34f3e0be-755f-4cf7-9f29-d365699d7c15" class=""><strong>IAM Roles and Permissions for Lambda Function:</strong></h3><ol type="1" id="a61d0019-3027-426c-b3ed-2db68d3f69b1" class="numbered-list" start="1"><li><strong>Lambda Service Role:</strong><ul id="614da947-8cde-4b5e-8abe-40a681461d56" class="bulleted-list"><li style="list-style-type:disc">This role is assumed by the Lambda service when it executes your function.</li></ul><ul id="1c658414-8fb2-4a97-a55d-1d4eeab93500" class="bulleted-list"><li style="list-style-type:disc">It should have permissions to execute Lambda functions and access CloudWatch Logs.</li></ul><ul id="316f2090-744c-494e-b192-17d9102c1d75" class="bulleted-list"><li style="list-style-type:disc">Attach the <code><strong>AWSLambdaBasicExecutionRole</strong></code> policy for basic Lambda execution.</li></ul><ul id="24a58553-6f42-41f3-99b4-e1df2d64734d" class="bulleted-list"><li style="list-style-type:disc">Attach the <code><strong>AWSLambdaRole</strong></code> policy for writing logs to CloudWatch.</li></ul></li></ol><ol type="1" id="8ff0fc94-4831-466d-9ab3-221e78c4737e" class="numbered-list" start="2"><li>Monitoring and logging </li></ol><ul id="164b6730-db7d-4638-b256-94caf4f20797" class="bulleted-list"><li style="list-style-type:disc">  Go to lambda console , monitoring and operations tools , additional edit monitoring  and enable everything.</li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="9e5a2139-07b2-4b4e-b926-bd42890b29f3"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="0d49c54c-26af-49d6-a44a-1924799698e6" class="">
+</p><p id="48421be2-3e6f-40e2-ae56-e3ea1225680d" class="">
+</p><hr id="7b5b0934-5052-4596-8a2e-62aa444272e9"/><p id="3b597a48-4d72-421c-8394-4e52e0804460" class="">
+</p><h3 id="f1d4c778-c722-448f-a3f3-3fc4c26d7525" class="">Date: <time>@November 18, 2023</time> </h3><h3 id="675924ef-cf8e-413e-a6a7-f81c6b38092f" class="">Question  18</h3><h3 id="bf783b7d-3fb3-4f1a-8e21-c3834be3034d" class="">Steps</h3><ul id="f0a44ab7-b87a-4e66-98de-1b8e0dff6b1e" class="bulleted-list"><li style="list-style-type:disc">Create a lambda function make sure to attach IAM role. </li></ul><pre id="07cd24ed-d952-4816-bc31-2329dfdb70b4" class="code"><code>import json
+import boto3
+import urllib.parse
+
+# Initialize AWS clients
+s3 = boto3.client(&#x27;s3&#x27;)
+dynamoDB = boto3.resource(&#x27;dynamodb&#x27;).Table(&#x27;YourDynamoDBTableName&#x27;)
+sns = boto3.client(&#x27;sns&#x27;)
+
+def lambda_handler(event, context):
+    try:
+        # Retrieve S3 bucket and object information from the S3 event
+        bucket = event[&#x27;Records&#x27;][0][&#x27;s3&#x27;][&#x27;bucket&#x27;][&#x27;name&#x27;]
+        key = urllib.parse.unquote_plus(event[&#x27;Records&#x27;][0][&#x27;s3&#x27;][&#x27;object&#x27;][&#x27;key&#x27;])
+        
+        # Retrieve the JSON data from the uploaded file
+        json_data = get_json_from_s3(bucket, key)
+        print(json_data)
+
+        # Store sensitive JSON data securely in DynamoDB
+        store_json_in_dynamodb(json_data)
+
+        # Publish a notification to SNS
+        publish_notification()
+
+        return {
+            &#x27;statusCode&#x27;: 200,
+            &#x27;body&#x27;: json.dumps(&#x27;JSON processing complete and stored in DynamoDB&#x27;)
+        }
+    except Exception as e:
+        print(f&quot;Error: {e}&quot;)
+        return {
+            &#x27;statusCode&#x27;: 500,
+            &#x27;body&#x27;: json.dumps(&#x27;Error processing JSON data&#x27;)
+        }
+
+def get_json_from_s3(bucket, key):
+    # Retrieve the content of the S3 object (JSON file)
+    response = s3.get_object(Bucket=bucket, Key=key)
+    json_data = json.loads(response[&#x27;Body&#x27;].read().decode(&#x27;utf-8&#x27;))
+    return json_data
+
+def store_json_in_dynamodb(json_data):
+    # Store the JSON data in DynamoDB
+    response = dynamoDB.put_item(
+        Item={
+            &#x27;id&#x27;: &#x27;1&#x27;,  # You might want to generate a unique ID
+            &#x27;data&#x27;: json_data
+        }
+    )
+
+def publish_notification():
+    # Publish a notification to SNS
+    sns.publish(
+        TopicArn=&#x27;arn:aws:sns:your-region:your-account-id:YourSNSTopicName&#x27;,  # Replace with your SNS topic ARN
+        Message=&#x27;File processing is complete! JSON data stored securely.&#x27;,
+        Subject=&#x27;File Processing Notification&#x27;
+    )</code></pre><p id="6f6ff92e-88a6-4014-86dd-55530a8d1e1b" class="">
+</p><pre id="21d94678-315e-4ed8-84de-db09f556da78" class="code"><code></code></pre><ul id="a7edae4b-c9b4-459e-aa5e-0c20e5959d40" class="bulleted-list"><li style="list-style-type:disc">Create a S3 bucket with default settings</li></ul><ul id="d9a758c5-178a-4ec2-a54a-3b2b5e9b041c" class="bulleted-list"><li style="list-style-type:disc">Go to the bucket, go to the properties tab and scroll down to the event notification ⇒ Create event notification→and tick the all object create event . scroll down to the destination panel and select lambda function select which lambda from the drop down and click Create.</li></ul><ul id="76f42ef3-9356-4fba-8689-a2d398a58bd7" class="bulleted-list"><li style="list-style-type:disc">go to SQS and Create queue </li></ul><ul id="ae3e1c8c-833d-400d-813d-91ecce43d2ec" class="bulleted-list"><li style="list-style-type:disc">go to SNS , go to create topic and select standard and click Create topic.</li></ul><ul id="0f581b4d-4046-40e3-998a-a526c15ec7d6" class="bulleted-list"><li style="list-style-type:disc">Click on the topic created and click create subscription select protocol as email and enter your email  . Then confirm the email.(mail aayega)</li></ul><figure id="0bae789d-21a8-4bd4-86ff-a0eb56b39c7f" class="image"><a href="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%209.png"><img style="width:576px" src="VICC%20Question%20Bank%207d7f36ade95f4b559d74b596d97cca10/Untitled%209.png"/></a></figure><ul id="c8323af1-6f67-4d42-b680-3022677d6386" class="bulleted-list"><li style="list-style-type:disc">Create a DynamoDB table, add a primary key and create it.</li></ul><h3 id="05b3c95e-9fcb-46c7-aaa3-66209cc8873d" class=""><strong>IAM Roles and Permissions for Lambda Function:</strong></h3><ol type="1" id="f77d766e-880e-4163-b149-7d8eb4597403" class="numbered-list" start="1"><li><strong>Lambda Service Role:</strong><ul id="60b225da-875f-48ef-87fd-01998a45d86d" class="bulleted-list"><li style="list-style-type:disc">This role is assumed by the Lambda service when it executes your function.</li></ul><ul id="9080c4be-961d-4251-bcfa-ef92ee47d0a6" class="bulleted-list"><li style="list-style-type:disc">It should have permissions to execute Lambda functions and access CloudWatch Logs.</li></ul><ul id="76c80a97-92a3-41fc-8bd7-beb3594f5446" class="bulleted-list"><li style="list-style-type:disc">Attach the <code><strong>AWSLambdaBasicExecutionRole</strong></code> policy for basic Lambda execution.</li></ul><ul id="1bc10609-0155-444a-aa86-99e22f36af7e" class="bulleted-list"><li style="list-style-type:disc">Attach the <code><strong>AWSLambdaRole</strong></code> policy for writing logs to CloudWatch.</li></ul></li></ol><ol type="1" id="92b5667c-382d-414f-88cf-3314679c8074" class="numbered-list" start="2"><li>Monitoring and logging </li></ol><ul id="936226e3-498a-4db3-9ceb-5709e951fa8e" class="bulleted-list"><li style="list-style-type:disc">  Go to lambda console , monitoring and operations tools , additional edit monitoring  and enable everything.</li></ul><p id="daec7b3b-23dd-4295-8e56-ec33f43d7f36" class="">
+</p><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="9c87a766-6f19-4571-a1e4-cf7e96e142fc"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="564338cf-3ee1-4849-abdb-36e42514eda1" class="">
+</p><hr id="1c4ca737-3ecb-4d39-a0d9-aab9d1fda4da"/><p id="862bbefd-6f96-486a-b94b-2cd62ad0c6dd" class="">
+</p><h3 id="fdafef14-2d89-48e1-b758-2159bb28fc48" class="">Date: <time>@November 18, 2023</time> </h3><h3 id="c4d8f5f7-b646-46b5-b7b1-377058102951" class="">Question  19 (Elastic Beanstalk)</h3><h3 id="c3e1222b-87a5-4119-b0e7-3f5f22f21bbd" class="">Steps</h3><ul id="af708053-9c1f-4bf9-893c-dc542e16abc7" class="bulleted-list"><li style="list-style-type:disc">Cloushell mei</li></ul><pre id="1c16dcfc-7359-45db-ac50-3d31b777903e" class="code"><code>mkdir eb-flask
+cd eb-flask
+sudo vi application.py
+sudo vi requirements.txt
+python3 -m ensurepip --upgrade
+pip3 install -r requirements.txt
+eb init -p python-3.11 hello-world --region ap-south-1
+eb create test-environment
+eb use test-environment
+eb status test-environment
+eb deploy</code></pre><p id="d83191b4-70b9-44d2-ada9-300f873c121a" class="">Application.py</p><pre id="48b82ab2-063f-4973-a15b-7fe6c9536b5c" class="code"><code>from flask import Flask
+
+application = Flask(__name__)
+
+
+@application.route(&quot;/&quot;)
+def hello():
+    &quot;&quot;&quot;Hello word method.&quot;&quot;&quot;
+    return &quot;Hello Calvine - This is a one step!&quot;
+
+
+# run the app.
+if __name__ == &quot;__main__&quot;:
+    application.run()
+
+# Esc(:wq)</code></pre><ul id="471d5237-2b05-4679-a333-0d151f01cec7" class="bulleted-list"><li style="list-style-type:disc">Requirements.txt</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="87415b4c-8d37-466c-b6f4-35063c0917ad"><div style="font-size:1.5em"><span class="icon">😈</span></div><div style="width:100%">Flask</div></figure><ul id="38af9060-7fc4-4d38-b023-a5744663e489" class="bulleted-list"><li style="list-style-type:disc">Open Elastic beanstalk → test-environment → configuration</li></ul><ul id="3a8bcb23-279c-44c3-9c1c-3b5b7ebfbe20" class="bulleted-list"><li style="list-style-type:disc">Capacity → Placement ⇒ Select All</li></ul><ul id="0ad2dc9e-5a6b-4b1b-8419-f7f8c636d399" class="bulleted-list"><li style="list-style-type:disc"></li></ul><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="63a1daf4-6e71-456c-8f06-5010c20d9fc8"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><strong>SUMMARY:</strong></div></figure><p id="d2da0b4d-582b-42ca-a0a9-39a6eb350192" class="">
+</p><hr id="be2d46b5-2ab6-4610-b1fa-e2aa1c900600"/><p id="bc4ea578-285b-4f3b-a090-fea924914f14" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
